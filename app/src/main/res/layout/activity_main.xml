@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Titulo origen -->
+    <TextView
+        android:id="@+id/primertex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="@dimen/izquierda"
+        android:layout_marginRight="@dimen/derecha"
+        android:text="@string/medidaOrigen"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_encabezado"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--RadioGroup_Origen-->
+    <RadioGroup
+        android:id="@+id/radiogroup_Origen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="60dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/primertex"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <RadioButton
+            android:id="@+id/rb_0_kilometros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/texto_rbtn"
+            android:text="@string/radio_kilometro"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_1_metros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-18dp"
+            android:text="@string/radio_metros"
+            android:textSize="@dimen/texto_rbtn"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_2_centimetros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/radio_centimetros"
+            android:textSize="@dimen/texto_rbtn"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+    </RadioGroup>
+
+    <!--Titulo destino-->
+    <TextView
+        android:id="@+id/segundotex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="@dimen/izquierda"
+        android:layout_marginRight="@dimen/derecha"
+        android:text="@string/medidaDestino"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_encabezado"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
