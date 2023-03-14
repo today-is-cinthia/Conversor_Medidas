@@ -2,8 +2,10 @@
     <string name="app_name">Convertidor de Medidas</string>
     <string name="medidaOrigen">Medida origen</string>
     <string name="medidaDestino">Medida destino</string>
+    <string name="valor_convertir">Valor a convertir:</string>
     <string name="radio_kilometro">Kilometros</string>
     <string name="radio_metros">Metros</string>
     <string name="radio_centimetros">Centimetros</string>
+    <string name="boton">Convertir</string>
 
 </resources>

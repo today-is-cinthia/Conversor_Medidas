@@ -11,7 +11,7 @@
         android:id="@+id/primertex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="@dimen/izquierda"
         android:layout_marginRight="@dimen/derecha"
         android:text="@string/medidaOrigen"
@@ -27,9 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="60dp"
+        android:layout_margin="40dp"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="@id/primertex"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         >
@@ -65,7 +65,7 @@
         android:id="@+id/segundotex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="180dp"
         android:layout_marginLeft="@dimen/izquierda"
         android:layout_marginRight="@dimen/derecha"
         android:text="@string/medidaDestino"
@@ -75,7 +75,102 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <!--RadioGroup_Destino-->
+    <RadioGroup
+        android:id="@+id/radiogroup_Destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="35dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/segundotex"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <RadioButton
+            android:id="@+id/rb_3_kilometros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/texto_rbtn"
+            android:text="@string/radio_kilometro"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_4_metros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-18dp"
+            android:text="@string/radio_metros"
+            android:textSize="@dimen/texto_rbtn"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/rb_5_centimetros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/radio_centimetros"
+            android:textSize="@dimen/texto_rbtn"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+    </RadioGroup>
+
+    <!--valor a convertir-->
+    <TextView
+        android:id="@+id/valor_convertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="@dimen/izquierda"
+        android:layout_marginRight="@dimen/derecha"
+        android:text="@string/valor_convertir"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_encabezado"
+        app:layout_constraintTop_toTopOf="@id/radiogroup_Destino"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--capturar numero-->
+    <EditText
+        android:id="@+id/editnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/texto_rbtn"
+        android:textAlignment="center"
+        android:layout_marginTop="1dp"
+        android:maxLength="10"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/valor_convertir"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--boton convertir -->
+    <Button
+        android:id="@+id/convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="@string/boton"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/editnum"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />" />
 
 
-
+    <!--mostrar resultado-->
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="@dimen/izquierda"
+        android:layout_marginRight="@dimen/derecha"
+        android:text=""
+        android:background="@drawable/stilo"
+        android:textAlignment="center"
+        android:textSize="@dimen/texto_encabezado"
+        app:layout_constraintTop_toTopOf="@id/convertir"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
